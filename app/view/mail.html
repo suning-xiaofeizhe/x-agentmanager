@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title>XNPP 运行时性能监控解决方案</title>
+</head>
+
+<body>
+  <p>您的应用 <strong><%= data.appId %></strong>
+    在实例 <strong><%= data.agentId %></strong> 于 <strong><%= data.period %></strong>
+    生 <strong><%= list.length %></strong> 条告警:</p>
+  <ul style="margin-left: 20px;margin-top: 5px;">
+    <% for(let i=0; i < list.length; i++) { const alarm = JSON.parse(list[i]); %>
+      <li> <%= alarm.time %>: <%= alarm.content %></li>
+    <% } %>
+  </ul>
+  <p style="margin-top: 10px;">点击 <a href="<%= linkurl %>">XNPP 运行时性能监控解决方案控制台</a>
+    查看详细信息，如有疑问可联系「消费者平台研发中心前端架构部」同学获取技术支持</p>
+</body>
+
+</html>

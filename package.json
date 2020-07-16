@@ -1,0 +1,38 @@
+{
+  "name": "x-agentmanager",
+  "version": "1.0.0",
+  "description": "manager for xagent",
+  "main": "app.js",
+  "dependencies": {
+    "boolex": "^2.1.0",
+    "contextex": "^1.2.0",
+    "egg": "^2.23.0",
+    "egg-mysql": "^3.0.0",
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.11.0",
+    "ip": "^1.1.5",
+    "moment": "^2.24.0",
+    "p-map": "^3.0.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.13.0",
+    "eslint": "^6.4.0",
+    "eslint-config-egg": "^7.5.1"
+  },
+  "scripts": {
+    "app": "npm i --production && eggctl stop --title=x-agentmanager && eggctl start --workers=4 --port=3000 --title=x-agentmanager --daemon",
+    "dev": "egg-bin dev --port=6543",
+    "lint": "eslint app config --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suning-xiaofeizhe/x-agentmanager.git"
+  },
+  "keywords": [
+    "xnpp",
+    "agentmanager"
+  ],
+  "author": "hyj1991 <yeekwanvong@gmail.com>",
+  "license": "MIT"
+}
